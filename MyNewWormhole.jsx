@@ -9,12 +9,17 @@ function CustomButton() {
   );
 }
 
+// export default function MyNewWormhole() {
+//   const message = React.useMemo(() => 'Hello, world!', []);
+//   return (
+//     <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
+//       <Animated.Text>{message}</Animated.Text>
+//       <CustomButton />
+//     </Animated.View>
+//   );
+// }
 export default function MyNewWormhole() {
-  const message = React.useMemo(() => 'Hello, world!', []);
   return (
-    <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
-      <Animated.Text>{message}</Animated.Text>
-      <CustomButton />
-    </Animated.View>
+    <Text>Testing WORMHOLE</Text>
   );
 }
