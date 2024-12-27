@@ -30,11 +30,11 @@ function CustomButton() {
 // }
 
 function MyNewWormhole() {
-  return /*#__PURE__*/React.createElement(View, {
+  return /*#__PURE__*/React.createElement(_reactNative.View, {
     style: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center'
     }
-  }, /*#__PURE__*/React.createElement(Text, null, "Test Wormhole Component"));
+  }, /*#__PURE__*/React.createElement(_reactNative.Text, null, "Test Wormhole Component"));
 }
