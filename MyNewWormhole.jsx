@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Animated, Alert, TouchableOpacity, Text } from 'react-native';
-
-import { InnerContainer, MsgBox, StyledContainer, TextLink, TextLinkContent } from '../components/styles';
+import { Animated, Alert, TouchableOpacity } from 'react-native';
 
 function CustomButton() {
   return (
@@ -11,19 +9,11 @@ function CustomButton() {
   );
 }
 
-// export default function MyNewWormhole() {
-//   const message = React.useMemo(() => 'Hello, world!', []);
-//   return (
-//     <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
-//       <Animated.Text>{message}</Animated.Text>
-//       <CustomButton />
-//     </Animated.View>
-//   );
-// }
 export default function MyNewWormhole() {
+  const message = React.useMemo(() => 'Hello, world!', []);
   return (
     <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
-      <Text>Testing WORMHOLE</Text> {/* Ensure Text is used properly */}
+      <Animated.Text>{message}</Animated.Text>
       <CustomButton />
     </Animated.View>
   );
