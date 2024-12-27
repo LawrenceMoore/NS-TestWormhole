@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Animated, Alert, TouchableOpacity } from 'react-native';
+import { Animated, Alert, TouchableOpacity, Text } from 'react-native';
+
+import { InnerContainer, MsgBox, StyledContainer, TextLink, TextLinkContent } from '../components/styles';
 
 function CustomButton() {
   return (
