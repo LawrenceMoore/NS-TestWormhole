@@ -27,5 +27,5 @@ function MyNewWormhole() {
       flex: 1,
       backgroundColor: 'red'
     }
-  }, /*#__PURE__*/React.createElement(_reactNative.Animated.Text, null, message), /*#__PURE__*/React.createElement(CustomButton, null));
+  }, /*#__PURE__*/React.createElement(CustomButton, null));
 }
