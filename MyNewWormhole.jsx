@@ -1,7 +1,8 @@
-// transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
-
 import * as React from 'react';
 import { Animated, Alert, TouchableOpacity, Text, View } from 'react-native';
+
+// transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
+
 
 function CustomButton() {
   return (
