@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Animated, Alert, TouchableOpacity, Text, View } from 'react-native';
-
+//  <-- MUST DO ON UPDATE!! --> 
 // transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 
+import * as React from 'react';
+import { Animated, Alert, TouchableOpacity, Text, View } from 'react-native';
 
 function CustomButton() {
   return (
@@ -14,20 +14,12 @@ function CustomButton() {
   );
 }
 
-// export default function MyNewWormhole() {
-//   const message = React.useMemo(() => 'Hello, world!', []);
-//   return (
-//     <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
-//       {/* <Animated.Text>{message}</Animated.Text> */}
-//       <CustomButton />
-//     </Animated.View>
-//   );
-// }
-
 export default function MyNewWormhole() {
+  const message = React.useMemo(() => 'Hello, world!', []);
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Test Wormhole Component</Text>
-    </View>
+    <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
+      {/* <Animated.Text>{message}</Animated.Text> */}
+      <CustomButton />
+    </Animated.View>
   );
 }
