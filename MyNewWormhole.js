@@ -21,7 +21,7 @@ function CustomButton() {
 }
 function MyNewWormhole() {
   var message = React.useMemo(function () {
-    return 'Hello, world!';
+    return 'Hello, world, this is from the wormhole!';
   }, []);
   return /*#__PURE__*/React.createElement(_reactNative.Animated.View, {
     style: {
