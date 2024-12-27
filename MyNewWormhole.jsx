@@ -22,6 +22,9 @@ function CustomButton() {
 // }
 export default function MyNewWormhole() {
   return (
-    <Text>Testing WORMHOLE</Text>
+    <Animated.View style={{ flex: 1, backgroundColor: 'red' }}>
+      <Text>Testing WORMHOLE</Text> {/* Ensure Text is used properly */}
+      <CustomButton />
+    </Animated.View>
   );
 }
