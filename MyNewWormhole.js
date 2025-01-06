@@ -12,7 +12,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 // 2. add, commit, push to main
 
 function MyNewWormhole(props) {
-  var cards = props.cards;
+  var cards = props.cards.cards;
   console.log("Cards", cards);
   var renderCard = function renderCard(_ref) {
     var _item$properties$loca, _item$properties$loca2;
