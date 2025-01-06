@@ -5,7 +5,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 
-export default function MyNewWormhole({ cards }) {
+export default function MyNewWormhole(props) {
+  const {cards} = props;
   console.log("Cards", cards);
     const renderCard = ({ item }) => (
         <View style={styles.card}>
