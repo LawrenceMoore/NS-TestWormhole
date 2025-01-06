@@ -30,7 +30,7 @@ function MyNewWormhole(_ref) {
   };
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
-  }, cards.length > 0 ? /*#__PURE__*/_react["default"].createElement(_reactNative.FlatList, {
+  }, cards && cards.length >= 0 ? /*#__PURE__*/_react["default"].createElement(_reactNative.FlatList, {
     data: cards,
     keyExtractor: function keyExtractor(item) {
       return item.id;
