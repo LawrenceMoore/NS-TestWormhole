@@ -15,7 +15,6 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 // 2. add, commit, push to main
 function MyNewWormhole(props) {
   var cards = props.cards.cards;
-  console.log("Cards", cards);
   var renderCard = function renderCard(_ref) {
     var _item$properties$loca, _item$properties$loca2;
     var item = _ref.item;
