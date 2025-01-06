@@ -1,33 +1,74 @@
 "use strict";
 
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = MyNewWormhole;
-var React = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 //  <-- MUST DO ON UPDATE!! --> 
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 
-function CustomButton() {
-  return /*#__PURE__*/React.createElement(_reactNative.TouchableOpacity, {
-    onPress: function onPress() {
-      return _reactNative.Alert.alert('Hello!');
-    }
-  }, /*#__PURE__*/React.createElement(_reactNative.Animated.Text, null, "Click here!"));
+function MyNewWormhole(_ref) {
+  var cards = _ref.cards;
+  var renderCard = function renderCard(_ref2) {
+    var _item$properties$loca, _item$properties$loca2;
+    var item = _ref2.item;
+    return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
+      style: styles.card
+    }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+      style: styles.title
+    }, item.properties.title), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+      style: styles.description
+    }, item.properties.description), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+      style: styles.price
+    }, "Base Price: $", item.properties.basePricePerNight), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+      style: styles.location
+    }, "Location: ", (_item$properties$loca = item.properties.location) === null || _item$properties$loca === void 0 || (_item$properties$loca = _item$properties$loca.address) === null || _item$properties$loca === void 0 ? void 0 : _item$properties$loca.city, ", ", (_item$properties$loca2 = item.properties.location) === null || _item$properties$loca2 === void 0 || (_item$properties$loca2 = _item$properties$loca2.address) === null || _item$properties$loca2 === void 0 ? void 0 : _item$properties$loca2.state));
+  };
+  return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
+    style: styles.container
+  }, cards && cards.length > 0 ? /*#__PURE__*/_react["default"].createElement(_reactNative.FlatList, {
+    data: cards,
+    keyExtractor: function keyExtractor(item) {
+      return item.id;
+    },
+    renderItem: renderCard
+  }) : /*#__PURE__*/_react["default"].createElement(_reactNative.Text, null, "No cards available"));
 }
-function MyNewWormhole() {
-  var message = React.useMemo(function () {
-    return 'Hello, world, this is from the wormhole!';
-  }, []);
-  return /*#__PURE__*/React.createElement(_reactNative.Animated.View, {
-    style: {
-      flex: 1,
-      backgroundColor: 'red'
-    }
-  }, /*#__PURE__*/React.createElement(_reactNative.Animated.Text, null, message), /*#__PURE__*/React.createElement(CustomButton, null));
-}
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f8f8f8',
+    padding: 10
+  },
+  card: {
+    padding: 20,
+    marginVertical: 10,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+  description: {
+    fontSize: 14,
+    marginVertical: 5
+  },
+  price: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginVertical: 5
+  },
+  location: {
+    fontSize: 14,
+    color: '#555'
+  }
+});
