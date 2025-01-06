@@ -11,13 +11,12 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 
-function MyNewWormhole(_ref) {
-  var props = _ref.props;
+function MyNewWormhole(props) {
   var cards = props.cards.cards;
   console.log("Cards", cards);
-  var renderCard = function renderCard(_ref2) {
+  var renderCard = function renderCard(_ref) {
     var _item$properties$loca, _item$properties$loca2;
-    var item = _ref2.item;
+    var item = _ref.item;
     return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
       style: styles.card
     }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
