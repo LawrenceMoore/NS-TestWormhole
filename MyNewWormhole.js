@@ -13,6 +13,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 
 function MyNewWormhole(_ref) {
   var cards = _ref.cards;
+  console.log("Cards", cards);
   var renderCard = function renderCard(_ref2) {
     var _item$properties$loca, _item$properties$loca2;
     var item = _ref2.item;
