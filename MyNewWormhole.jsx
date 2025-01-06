@@ -16,6 +16,7 @@ export default function MyNewWormhole(props) {
             <Text style={styles.location}>
                 Location: {item.properties.location?.address?.city}, {item.properties.location?.address?.state}
             </Text>
+            <Text style={styles.type}>Type: ${item.headers.type}</Text>
         </View>
     );
 
@@ -67,4 +68,8 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#555',
     },
+    location: {
+      fontSize: 18,
+      color: '#777',
+  }
 });
