@@ -16,7 +16,7 @@ export default function MyNewWormhole(props) {
             <Text style={styles.location}>
                 Location: {item.properties.location?.address?.city}, {item.properties.location?.address?.state}
             </Text>
-            <Text style={styles.type}>Type: ${item.headers.type}</Text>
+            <Text style={styles.type}>Type: ${item.header.type}</Text>
         </View>
     );
 

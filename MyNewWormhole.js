@@ -31,7 +31,7 @@ function MyNewWormhole(props) {
       style: styles.location
     }, "Location: ", (_item$properties$loca = item.properties.location) === null || _item$properties$loca === void 0 || (_item$properties$loca = _item$properties$loca.address) === null || _item$properties$loca === void 0 ? void 0 : _item$properties$loca.city, ", ", (_item$properties$loca2 = item.properties.location) === null || _item$properties$loca2 === void 0 || (_item$properties$loca2 = _item$properties$loca2.address) === null || _item$properties$loca2 === void 0 ? void 0 : _item$properties$loca2.state), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
       style: styles.type
-    }, "Type: $", item.headers.type));
+    }, "Type: $", item.header.type));
   };
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
