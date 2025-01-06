@@ -19,7 +19,7 @@ export default function MyNewWormhole({ cards }) {
 
     return (
         <View style={styles.container}>
-            {cards && cards.length > 0 ? (
+            { cards.length > 0 ? (
                 <FlatList
                     data={cards}
                     keyExtractor={(item) => item.id}
