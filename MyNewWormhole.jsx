@@ -2,31 +2,11 @@
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function MyNewWormhole() {
-    const [cards, setCards] = useState([]);
-
-    // Function to load cards from local storage
-    const loadCardsFromLocalStorage = async () => {
-        try {
-            const storedCards = await AsyncStorage.getItem('eprofile');
-            if (storedCards.requests) {
-                setCards(JSON.parse(storedCards));
-            } else {
-                console.warn('No cards found in local storage');
-            }
-        } catch (error) {
-            console.error('Error loading cards from local storage:', error);
-        }
-    };
-
-    useEffect(() => {
-        loadCardsFromLocalStorage();
-    }, []);
-
+export default function MyNewWormhole(props) {
+  const {cards} = props.cards;
     const renderCard = ({ item }) => (
         <View style={styles.card}>
             <Text style={styles.title}>{item.properties.title}</Text>
@@ -41,7 +21,7 @@ export default function MyNewWormhole() {
 
     return (
         <View style={styles.container}>
-            {cards && cards.length > 0 ? (
+            {cards && cards.length >= 0 ? (
                 <FlatList
                     data={cards}
                     keyExtractor={(item) => item.id}
@@ -87,8 +67,8 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#555',
     },
-    type: {
-        fontSize: 18,
-        color: '#777',
-    },
+    location: {
+      fontSize: 18,
+      color: '#777',
+  }
 });
