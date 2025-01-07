@@ -12,7 +12,7 @@ export default function MyNewWormhole() {
     // Function to load cards from local storage
     const loadCardsFromLocalStorage = async () => {
         try {
-            const storedCards = await AsyncStorage.getItem('cards');
+            const storedCards = await AsyncStorage.getItem('requests');
             if (storedCards) {
                 setCards(JSON.parse(storedCards));
             } else {
