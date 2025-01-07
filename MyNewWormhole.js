@@ -37,10 +37,10 @@ function MyNewWormhole() {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return _asyncStorage["default"].getItem('requests');
+            return _asyncStorage["default"].getItem('eprofile');
           case 3:
             storedCards = _context.sent;
-            if (storedCards) {
+            if (storedCards.requests) {
               setCards(JSON.parse(storedCards));
             } else {
               console.warn('No cards found in local storage');

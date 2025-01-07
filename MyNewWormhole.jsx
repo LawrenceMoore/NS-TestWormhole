@@ -12,8 +12,8 @@ export default function MyNewWormhole() {
     // Function to load cards from local storage
     const loadCardsFromLocalStorage = async () => {
         try {
-            const storedCards = await AsyncStorage.getItem('requests');
-            if (storedCards) {
+            const storedCards = await AsyncStorage.getItem('eprofile');
+            if (storedCards.requests) {
                 setCards(JSON.parse(storedCards));
             } else {
                 console.warn('No cards found in local storage');
