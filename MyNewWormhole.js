@@ -32,7 +32,10 @@ function MyNewWormhole(_ref) {
   };
 
   // if (!request) {
-  return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
+  return /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {
+    onPress: handlePress,
+    style: styles.container
+  }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.title
@@ -43,7 +46,7 @@ function MyNewWormhole(_ref) {
     onChangeText: function onChangeText(text) {
       return setInputValue(text);
     }
-  }));
+  })));
   // }
 
   return /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {

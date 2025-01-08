@@ -15,6 +15,7 @@ export default function MyNewWormhole({request, callback}) {
 
     // if (!request) {
         return (
+            <TouchableOpacity onPress={handlePress} style={styles.container}>
             <View style={styles.container}>
                 <Text style={styles.title}>No request available</Text>
                 <TextInput
@@ -24,6 +25,7 @@ export default function MyNewWormhole({request, callback}) {
                     onChangeText={(text) => setInputValue(text)}
                 />
             </View>
+            </TouchableOpacity>
         );
     // }
 
