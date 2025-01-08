@@ -27,20 +27,22 @@ function MyNewWormhole(_ref) {
       callback(inputValue);
     }
   };
-  if (!request) {
-    return /*#__PURE__*/_react.React.createElement(_reactNative.View, {
-      style: styles.container
-    }, /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
-      style: styles.title
-    }, "No request available"), /*#__PURE__*/_react.React.createElement(_reactNative.TextInput, {
-      style: styles.input,
-      placeholder: "Enter message",
-      value: inputValue,
-      onChangeText: function onChangeText(text) {
-        return setInputValue(text);
-      }
-    }));
-  }
+
+  // if (!request) {
+  return /*#__PURE__*/_react.React.createElement(_reactNative.View, {
+    style: styles.container
+  }, /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+    style: styles.title
+  }, "No request available"), /*#__PURE__*/_react.React.createElement(_reactNative.TextInput, {
+    style: styles.input,
+    placeholder: "Enter message",
+    value: inputValue,
+    onChangeText: function onChangeText(text) {
+      return setInputValue(text);
+    }
+  }));
+  // }
+
   return /*#__PURE__*/_react.React.createElement(_reactNative.TouchableOpacity, {
     onPress: handlePress,
     style: styles.container

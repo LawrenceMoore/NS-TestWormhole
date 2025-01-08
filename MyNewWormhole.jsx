@@ -13,7 +13,7 @@ export default function MyNewWormhole({request, callback}) {
         }
     }
 
-    if (!request) {
+    // if (!request) {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>No request available</Text>
@@ -25,7 +25,7 @@ export default function MyNewWormhole({request, callback}) {
                 />
             </View>
         );
-    }
+    // }
 
     return (
         <TouchableOpacity onPress={handlePress} style={styles.container}>
