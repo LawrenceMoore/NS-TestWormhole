@@ -3,30 +3,30 @@
 // 2. add, commit, push to main
 
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function MyNewWormhole(props) {
-  const {request} = props.request;
-    const renderCard = ({ item }) => (
-        <View style={styles.card}>
-            <Text style={styles.title}>{item.properties.title}</Text>
-            <Text style={styles.description}>{item.properties.description}</Text>
-            <Text style={styles.price}>Base Price: ${item.properties.basePricePerNight}</Text>
-            <Text style={styles.location}>
-                Location: {item.properties.location?.address?.city}, {item.properties.location?.address?.state}
-            </Text>
-            <Text style={styles.type}>Type: {item.header.type}</Text>
-        </View>
-    );
+    const { request } = props;
+
+    if (!request) {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.title}>No request available</Text>
+            </View>
+        );
+    }
 
     return (
         <View style={styles.container}>
-            <FlatList
-                data={request}
-                keyExtractor={(item) => item.id}
-                renderItem={renderCard}
-            />
-
+            <View style={styles.card}>
+                <Text style={styles.title}>{request.properties.title}</Text>
+                <Text style={styles.description}>{request.properties.description}</Text>
+                <Text style={styles.price}>Base Price: ${request.properties.basePricePerNight}</Text>
+                <Text style={styles.location}>
+                    Location: {request.properties.location?.address?.city}, {request.properties.location?.address?.state}
+                </Text>
+                <Text style={styles.type}>Type: {request.header.type}</Text>
+            </View>
         </View>
     );
 }
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#555',
     },
-    location: {
-      fontSize: 18,
-      color: '#777',
-  }
+    type: {
+        fontSize: 18,
+        color: '#777',
+    },
 });
