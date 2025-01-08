@@ -1,11 +1,14 @@
 "use strict";
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = MyNewWormhole;
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
 var _reactNative = require("react-native");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -29,11 +32,11 @@ function MyNewWormhole(_ref) {
   };
 
   // if (!request) {
-  return /*#__PURE__*/_react.React.createElement(_reactNative.View, {
+  return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
-  }, /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.title
-  }, "No request available"), /*#__PURE__*/_react.React.createElement(_reactNative.TextInput, {
+  }, "No request available"), /*#__PURE__*/_react["default"].createElement(_reactNative.TextInput, {
     style: styles.input,
     placeholder: "Enter message",
     value: inputValue,
@@ -43,20 +46,20 @@ function MyNewWormhole(_ref) {
   }));
   // }
 
-  return /*#__PURE__*/_react.React.createElement(_reactNative.TouchableOpacity, {
+  return /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {
     onPress: handlePress,
     style: styles.container
-  }, /*#__PURE__*/_react.React.createElement(_reactNative.View, {
+  }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.card
-  }, /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.title
-  }, request.properties.title), /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+  }, request.properties.title), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.description
-  }, request.properties.description), /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+  }, request.properties.description), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.price
-  }, "Base Price: $", request.properties.basePricePerNight), /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+  }, "Base Price: $", request.properties.basePricePerNight), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.location
-  }, "Location: ", (_request$properties$l = request.properties.location) === null || _request$properties$l === void 0 || (_request$properties$l = _request$properties$l.address) === null || _request$properties$l === void 0 ? void 0 : _request$properties$l.city, ", ", (_request$properties$l2 = request.properties.location) === null || _request$properties$l2 === void 0 || (_request$properties$l2 = _request$properties$l2.address) === null || _request$properties$l2 === void 0 ? void 0 : _request$properties$l2.state), /*#__PURE__*/_react.React.createElement(_reactNative.Text, {
+  }, "Location: ", (_request$properties$l = request.properties.location) === null || _request$properties$l === void 0 || (_request$properties$l = _request$properties$l.address) === null || _request$properties$l === void 0 ? void 0 : _request$properties$l.city, ", ", (_request$properties$l2 = request.properties.location) === null || _request$properties$l2 === void 0 || (_request$properties$l2 = _request$properties$l2.address) === null || _request$properties$l2 === void 0 ? void 0 : _request$properties$l2.state), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.type
   }, "Type: ", request.header.type)));
 }

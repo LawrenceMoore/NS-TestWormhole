@@ -2,7 +2,7 @@
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 
-import {React, useState} from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
 export default function MyNewWormhole({request, callback}) {
