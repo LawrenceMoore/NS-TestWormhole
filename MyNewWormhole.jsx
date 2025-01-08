@@ -22,7 +22,7 @@ export default function MyNewWormhole({request, callback}) {
     }
 
     return (
-        <View style={styles.container} onPress = {handlePress}>
+        <TouchableOpacity onPress={handlePress} style={styles.container}>
             <View style={styles.card}>
                 <Text style={styles.title}>{request.properties.title}</Text>
                 <Text style={styles.description}>{request.properties.description}</Text>
@@ -32,7 +32,7 @@ export default function MyNewWormhole({request, callback}) {
                 </Text>
                 <Text style={styles.type}>Type: {request.header.type}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 

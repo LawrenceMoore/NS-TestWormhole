@@ -28,9 +28,9 @@ function MyNewWormhole(_ref) {
       style: styles.title
     }, "No request available"));
   }
-  return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
-    style: styles.container,
-    onPress: handlePress
+  return /*#__PURE__*/_react["default"].createElement(TouchableOpacity, {
+    onPress: handlePress,
+    style: styles.container
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.card
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
