@@ -7,6 +7,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function MyNewWormhole({request, callback}) {
     const handlePress = () => {
+        console.log("press");
         if (callback) {
           callback(); // Invoke the callback function passed from the app
         }

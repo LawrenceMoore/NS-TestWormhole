@@ -16,6 +16,7 @@ function MyNewWormhole(_ref) {
   var request = _ref.request,
     callback = _ref.callback;
   var handlePress = function handlePress() {
+    console.log("press");
     if (callback) {
       callback(); // Invoke the callback function passed from the app
     }
