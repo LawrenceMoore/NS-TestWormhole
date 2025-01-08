@@ -11,9 +11,15 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 
-function MyNewWormhole(props) {
+function MyNewWormhole(_ref) {
   var _request$properties$l, _request$properties$l2;
-  var request = props.request;
+  var request = _ref.request,
+    callback = _ref.callback;
+  var handlePress = function handlePress() {
+    if (callback) {
+      callback(); // Invoke the callback function passed from the app
+    }
+  };
   if (!request) {
     return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
       style: styles.container
@@ -22,7 +28,8 @@ function MyNewWormhole(props) {
     }, "No request available"));
   }
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
-    style: styles.container
+    style: styles.container,
+    onPress: handlePress
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.card
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {

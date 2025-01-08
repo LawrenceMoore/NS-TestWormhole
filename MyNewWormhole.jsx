@@ -5,8 +5,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function MyNewWormhole(props) {
-    const { request } = props;
+export default function MyNewWormhole({request, callback}) {
+    const handlePress = () => {
+        if (callback) {
+          callback(); // Invoke the callback function passed from the app
+        }
+    }
 
     if (!request) {
         return (
@@ -17,7 +21,7 @@ export default function MyNewWormhole(props) {
     }
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container} onPress = {handlePress}>
             <View style={styles.card}>
                 <Text style={styles.title}>{request.properties.title}</Text>
                 <Text style={styles.description}>{request.properties.description}</Text>
