@@ -6,7 +6,7 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 export default function MyNewWormhole(props) {
-  const {cards} = props.cards;
+  const {request} = props.request;
     const renderCard = ({ item }) => (
         <View style={styles.card}>
             <Text style={styles.title}>{item.properties.title}</Text>
@@ -21,15 +21,12 @@ export default function MyNewWormhole(props) {
 
     return (
         <View style={styles.container}>
-            {cards && cards.length >= 0 ? (
-                <FlatList
-                    data={cards}
-                    keyExtractor={(item) => item.id}
-                    renderItem={renderCard}
-                />
-            ) : (
-                <Text>No cards available</Text>
-            )}
+            <FlatList
+                data={request}
+                keyExtractor={(item) => item.id}
+                renderItem={renderCard}
+            />
+
         </View>
     );
 }

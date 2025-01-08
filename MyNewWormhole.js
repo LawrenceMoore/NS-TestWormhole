@@ -14,7 +14,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 function MyNewWormhole(props) {
-  var cards = props.cards.cards;
+  var request = props.request.request;
   var renderCard = function renderCard(_ref) {
     var _item$properties$loca, _item$properties$loca2;
     var item = _ref.item;
@@ -34,13 +34,13 @@ function MyNewWormhole(props) {
   };
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
-  }, cards && cards.length >= 0 ? /*#__PURE__*/_react["default"].createElement(_reactNative.FlatList, {
-    data: cards,
+  }, /*#__PURE__*/_react["default"].createElement(_reactNative.FlatList, {
+    data: request,
     keyExtractor: function keyExtractor(item) {
       return item.id;
     },
     renderItem: renderCard
-  }) : /*#__PURE__*/_react["default"].createElement(_reactNative.Text, null, "No cards available"));
+  }));
 }
 var styles = _reactNative.StyleSheet.create(_defineProperty({
   container: {
