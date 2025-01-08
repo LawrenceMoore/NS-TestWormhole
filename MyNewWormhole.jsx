@@ -2,14 +2,14 @@
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {React, useState} from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
 export default function MyNewWormhole({request, callback}) {
+    const [inputValue, setInputValue] = useState('');
     const handlePress = () => {
-        console.log("press");
         if (callback) {
-          callback(); // Invoke the callback function passed from the app
+          callback(inputValue);
         }
     }
 
@@ -17,6 +17,12 @@ export default function MyNewWormhole({request, callback}) {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>No request available</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder= "Enter message"
+                    value={inputValue} 
+                    onChangeText={(text) => setInputValue(text)}
+                />
             </View>
         );
     }
@@ -72,5 +78,12 @@ const styles = StyleSheet.create({
     type: {
         fontSize: 18,
         color: '#777',
+    },
+    input: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        borderRadius: 5,
+        paddingHorizontal: 10,
     },
 });
