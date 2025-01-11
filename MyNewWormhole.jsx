@@ -26,7 +26,7 @@ export default function MyNewWormhole({request, callback}) {
             </TouchableOpacity>
         );
     }
-
+    console.log("wormhole ", request);
     return (
         <TouchableOpacity onPress={handlePress} style={styles.container}>
             <View style={styles.card}>
