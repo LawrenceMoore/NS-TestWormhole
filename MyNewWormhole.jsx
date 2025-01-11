@@ -12,8 +12,8 @@ export default function MyNewWormhole({request, callback}) {
           callback(inputValue);
         }
     }
-
-    // if (!request) {
+    console.log("R: ", request);
+    if (request) {
         return (
             <TouchableOpacity onPress={handlePress} style={styles.container}>
             <View style={styles.container}>
@@ -21,13 +21,12 @@ export default function MyNewWormhole({request, callback}) {
                 <TextInput
                     style={styles.input}
                     placeholder= "Enter message"
-                    // value={inputValue} 
                     onChangeText={(text) => setInputValue(text)}
                 />
             </View>
             </TouchableOpacity>
         );
-    // }
+    }
 
     return (
         <TouchableOpacity onPress={handlePress} style={styles.container}>
