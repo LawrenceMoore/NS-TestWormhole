@@ -41,8 +41,9 @@ function MyNewWormhole(_ref) {
     style: styles.title
   }, "No request available"), /*#__PURE__*/_react["default"].createElement(_reactNative.TextInput, {
     style: styles.input,
-    placeholder: "Enter message",
-    value: inputValue,
+    placeholder: "Enter message"
+    // value={inputValue} 
+    ,
     onChangeText: function onChangeText(text) {
       return setInputValue(text);
     }

@@ -21,7 +21,7 @@ export default function MyNewWormhole({request, callback}) {
                 <TextInput
                     style={styles.input}
                     placeholder= "Enter message"
-                    value={inputValue} 
+                    // value={inputValue} 
                     onChangeText={(text) => setInputValue(text)}
                 />
             </View>
