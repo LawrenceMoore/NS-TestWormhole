@@ -54,15 +54,15 @@ function MyNewWormhole(_ref) {
     style: styles.card
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.title
-  }, request.requestThings.properties.title), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+  }, request.requestThings[0].properties.title), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.description
-  }, request.requestThings.properties.description), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+  }, request.requestThings[0].properties.description), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.price
-  }, "Base Price: $", request.requestThings.properties.basePricePerNight), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+  }, "Base Price: $", request.requestThings[0].properties.basePricePerNight), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.location
-  }, "Location: ", (_request$requestThing = request.requestThings.properties.location) === null || _request$requestThing === void 0 || (_request$requestThing = _request$requestThing.address) === null || _request$requestThing === void 0 ? void 0 : _request$requestThing.city, ", ", (_request$properties$l = request.properties.location) === null || _request$properties$l === void 0 || (_request$properties$l = _request$properties$l.address) === null || _request$properties$l === void 0 ? void 0 : _request$properties$l.state), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+  }, "Location: ", (_request$requestThing = request.requestThings[0].properties.location) === null || _request$requestThing === void 0 || (_request$requestThing = _request$requestThing.address) === null || _request$requestThing === void 0 ? void 0 : _request$requestThing.city, ", ", (_request$properties$l = request.properties.location) === null || _request$properties$l === void 0 || (_request$properties$l = _request$properties$l.address) === null || _request$properties$l === void 0 ? void 0 : _request$properties$l.state), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.type
-  }, "Type: ", request.requestThings.header.type)));
+  }, "Type: ", request.requestThings[0].header.type)));
 }
 var styles = _reactNative.StyleSheet.create({
   container: {

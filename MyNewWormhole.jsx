@@ -30,13 +30,13 @@ export default function MyNewWormhole({request, callback}) {
     return (
         <TouchableOpacity onPress={handlePress} style={styles.container}>
             <View style={styles.card}>
-                <Text style={styles.title}>{request.requestThings.properties.title}</Text>
-                <Text style={styles.description}>{request.requestThings.properties.description}</Text>
-                <Text style={styles.price}>Base Price: ${request.requestThings.properties.basePricePerNight}</Text>
+                <Text style={styles.title}>{request.requestThings[0].properties.title}</Text>
+                <Text style={styles.description}>{request.requestThings[0].properties.description}</Text>
+                <Text style={styles.price}>Base Price: ${request.requestThings[0].properties.basePricePerNight}</Text>
                 <Text style={styles.location}>
-                    Location: {request.requestThings.properties.location?.address?.city}, {request.properties.location?.address?.state}
+                    Location: {request.requestThings[0].properties.location?.address?.city}, {request.properties.location?.address?.state}
                 </Text>
-                <Text style={styles.type}>Type: {request.requestThings.header.type}</Text>
+                <Text style={styles.type}>Type: {request.requestThings[0].header.type}</Text>
             </View>
         </TouchableOpacity>
     );
