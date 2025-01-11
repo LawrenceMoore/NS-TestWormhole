@@ -46,7 +46,6 @@ function MyNewWormhole(_ref) {
       }
     })));
   }
-  console.log("wormhole ", request);
   return /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {
     onPress: handlePress,
     style: styles.container
