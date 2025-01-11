@@ -18,7 +18,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; } //  <-- MUST DO 
 // 1. transpile command: npx babel --presets=@babel/preset-env,@babel/preset-react MyNewWormhole.jsx -o MyNewWormhole.js
 // 2. add, commit, push to main
 function MyNewWormhole(_ref) {
-  var _request$requestThing, _request$properties$l;
+  var _request$requestThing, _request$requestThing2;
   var request = _ref.request,
     callback = _ref.callback;
   var _useState = (0, _react.useState)(''),
@@ -60,7 +60,7 @@ function MyNewWormhole(_ref) {
     style: styles.price
   }, "Base Price: $", request.requestThings[0].properties.basePricePerNight), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.location
-  }, "Location: ", (_request$requestThing = request.requestThings[0].properties.location) === null || _request$requestThing === void 0 || (_request$requestThing = _request$requestThing.address) === null || _request$requestThing === void 0 ? void 0 : _request$requestThing.city, ", ", (_request$properties$l = request.properties.location) === null || _request$properties$l === void 0 || (_request$properties$l = _request$properties$l.address) === null || _request$properties$l === void 0 ? void 0 : _request$properties$l.state), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+  }, "Location: ", (_request$requestThing = request.requestThings[0].properties.location) === null || _request$requestThing === void 0 || (_request$requestThing = _request$requestThing.address) === null || _request$requestThing === void 0 ? void 0 : _request$requestThing.city, ", ", (_request$requestThing2 = request.requestThings[0].properties.location) === null || _request$requestThing2 === void 0 || (_request$requestThing2 = _request$requestThing2.address) === null || _request$requestThing2 === void 0 ? void 0 : _request$requestThing2.state), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: styles.type
   }, "Type: ", request.requestThings[0].header.type)));
 }
