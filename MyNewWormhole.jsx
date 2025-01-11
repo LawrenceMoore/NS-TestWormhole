@@ -12,7 +12,7 @@ export default function MyNewWormhole({request, callback}) {
           callback(inputValue);
         }
     }
-    if (request.length == 0) {
+    if (request == undefined) {
         return (
             <TouchableOpacity onPress={handlePress} style={styles.container}>
             <View style={styles.container}>

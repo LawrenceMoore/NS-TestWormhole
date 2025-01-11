@@ -30,7 +30,7 @@ function MyNewWormhole(_ref) {
       callback(inputValue);
     }
   };
-  if (request.length == 0) {
+  if (request == undefined) {
     return /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {
       onPress: handlePress,
       style: styles.container
